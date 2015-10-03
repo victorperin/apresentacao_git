@@ -54,11 +54,15 @@
 							<div>
 								<p class="vertical">Oi, sou <a href="http://victorperin.com" target="_blank">Victor Perin</a>.</p>
 								<p>Um cara não muito importante, amante de programação, Star Wars, inutilidades...</p>
+								<div class="fragment" data-state="bacon-background" data-background="img/bacon.gif">
+									<br/>
+									<h1 class="bacon">e BACON!!1!</h1>
+								</div>
 							</div>
 						</div>
 					</section>
 					<section data-background="img/bacon.gif">
-						<h1>e BACON!!1!</h1>
+
 					</section>
 					<section id="why_me">
 						<h2>Onde eu uso git?</h2>
@@ -427,6 +431,11 @@ Reveal.addEventListener( 'customevent', function() {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+			Reveal.addEventListener( 'fragmentshown', function( event ) {
+    		if(event.fragment.querySelector( '.bacon' )){
+						console.log( 'BACOOOOOON!!1!' );
+				}
+			} );
 
 		</script>
 
